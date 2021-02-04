@@ -8,8 +8,8 @@ set showcmd
 " line numbers
 set number
 
-" highlight current line
-set cursorline
+" highlight cursor position
+set cursorcolumn
 
 " show info about line at bottom
 set ruler
