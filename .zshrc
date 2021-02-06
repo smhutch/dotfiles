@@ -1,7 +1,6 @@
-# oh-my-zsh
-export ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=$HOME/dotfiles/.oh-my-zsh
 ZSH_THEME="spaceship"
+export ZSH=$HOME/.oh-my-zsh
 
 plugins=(
   git
