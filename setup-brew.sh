@@ -11,6 +11,7 @@ brew install --cask visual-studio-code
 
 # pkg
 brew install gh
+brew install starship
 brew install trash
 brew install yarn
 brew install z

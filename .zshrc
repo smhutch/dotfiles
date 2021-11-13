@@ -1,4 +1,5 @@
-ZSH_CUSTOM=$HOME/dotfiles/omz
+export DOTFILES=$HOME/dotfiles
+export ZSH=$HOME/.oh-my-zsh
 
 plugins=(
   git
@@ -7,8 +8,10 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+source $DOTFILES/my.zsh
 
-# Starthip prompt
+# Starship prompt
+export STARSHIP_CONFIG=$DOTFILES/starship.toml
 eval "$(starship init zsh)"
 
 # NVM

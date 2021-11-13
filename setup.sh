@@ -1,8 +1,6 @@
 # fail fast
 set -e
 
-ZSH_CUSTOM=$HOME/dotfiles/omz
-
 check () {
   echo "  \xE2\x9C\x94 $1"
 }
@@ -19,9 +17,9 @@ nest () {
 echo 'Running install script.'
 
 section 'oh-my-zsh autosuggestions plugin'
-if [ ! -d $ZSH_CUSTOM/plugins/zsh-autosuggestions ]; then
+if [ ! -d $ZSH/plugins/zsh-autosuggestions ]; then
   nest "Cloning..."
-  git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions --quiet
+  git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH/plugins/zsh-autosuggestions --quiet
   check "Cloned"
   else
   check "Already exists"
