@@ -1,6 +1,4 @@
-ZSH_CUSTOM=$HOME/dotfiles/.oh-my-zsh
-ZSH_THEME="spaceship"
-export ZSH=$HOME/.oh-my-zsh
+ZSH_CUSTOM=$HOME/dotfiles/omz
 
 plugins=(
   git
@@ -10,6 +8,9 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# Starthip prompt
+eval "$(starship init zsh)"
+
+# NVM
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvmi
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"

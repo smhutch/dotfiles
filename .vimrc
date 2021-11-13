@@ -1,6 +1,5 @@
 " pretty syntax
 syntax on
-colorscheme dracula
 
 " show last command
 set showcmd

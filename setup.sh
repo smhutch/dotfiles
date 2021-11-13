@@ -1,7 +1,7 @@
 # fail fast
 set -e
 
-ZSH_CUSTOM=$HOME/dotfiles/.oh-my-zsh
+ZSH_CUSTOM=$HOME/dotfiles/omz
 
 check () {
   echo "  \xE2\x9C\x94 $1"
@@ -26,20 +26,6 @@ if [ ! -d $ZSH_CUSTOM/plugins/zsh-autosuggestions ]; then
   else
   check "Already exists"
 fi
-
-section 'spaceship prompt'
-if [ ! -d $ZSH_CUSTOM/themes/spaceship-prompt ]; then
-  nest "Cloning..."
-  git clone https://github.com/denysdovhan/spaceship-prompt.git $ZSH_CUSTOM/themes/spaceship-prompt --quiet --depth=1
-  check "Cloned"
-  ln -svf $ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme $ZSH_CUSTOM/themes/spaceship.zsh-theme
-  check "Symlinked prompt to themes directory"
-  else
-  check "Already exists"
-fi
-
-section 'global deps'
-npm i -g trash-cli
 
 section 'Symlink dotfiles'
 nest .vimrc
