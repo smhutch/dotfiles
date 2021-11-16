@@ -1,6 +1,7 @@
 # apps
 brew install --cask 1password
 brew install --cask cleanshot
+brew install --cask figma
 brew install --cask firefox
 brew install --cask github
 brew install --cask iterm2
@@ -15,3 +16,7 @@ brew install starship
 brew install trash
 brew install yarn
 brew install z
+
+# fonts
+brew tap homebrew/cask-fonts
+brew install --cask font-fira-code
