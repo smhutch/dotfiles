@@ -16,6 +16,9 @@ nest () {
 
 echo 'Running install script.'
 
+section 'installing oh-my-zsh'
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 section 'oh-my-zsh autosuggestions plugin'
 if [ ! -d $ZSH/plugins/zsh-autosuggestions ]; then
   nest "Cloning..."
@@ -24,6 +27,9 @@ if [ ! -d $ZSH/plugins/zsh-autosuggestions ]; then
   else
   check "Already exists"
 fi
+
+section 'installing z'
+git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
 
 section 'Symlink dotfiles'
 nest .vimrc

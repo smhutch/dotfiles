@@ -1,6 +1,7 @@
 # apps
 brew install --cask 1password
 brew install --cask cleanshot
+brew install --cask cron
 brew install --cask figma
 brew install --cask firefox
 brew install --cask github
@@ -9,6 +10,8 @@ brew install --cask iterm2
 brew install --cask notion
 brew install --cask raycast
 brew install --cask rectangle
+brew install --cask slack
+brew install --cask spark
 brew install --cask visual-studio-code
 
 # pkg

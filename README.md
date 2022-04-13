@@ -9,4 +9,5 @@
 
 ## Setup
 
-Install [homebrew](https://brew.sh/), then run `./setup-brew.sh`
+- Install [homebrew](https://brew.sh/), then run `./setup-brew.sh`
+- Open iTerm preferences. Use profile in `/dotfiles/profiles`
