@@ -2,6 +2,6 @@ alias reload="source ~/.zshrc"
 alias rm="trash"
 alias co="git checkout"
 
-name() {
+branch-name() {
     git symbolic-ref --short HEAD | cat
 }

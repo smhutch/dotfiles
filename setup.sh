@@ -17,7 +17,12 @@ nest () {
 echo 'Running install script.'
 
 section 'installing oh-my-zsh'
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  check "Oh My Zsh installed"
+else
+  check "Oh My Zsh already installed"
+fi
 
 section 'oh-my-zsh autosuggestions plugin'
 if [ ! -d $ZSH/plugins/zsh-autosuggestions ]; then
@@ -28,8 +33,14 @@ if [ ! -d $ZSH/plugins/zsh-autosuggestions ]; then
   check "Already exists"
 fi
 
-section 'installing z'
-git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
+section 'zsh-z plugin'
+if [ ! -d $ZSH/plugins/zsh-z ]; then
+  nest "Cloning..."
+  git clone https://github.com/agkozak/zsh-z $ZSH/plugins/zsh-z
+  check "Cloned"
+  else
+  check "Already exists"
+fi
 
 section 'Symlink dotfiles'
 nest .vimrc

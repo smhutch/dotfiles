@@ -12,7 +12,7 @@ brew install --cask raycast
 brew install --cask rectangle
 brew install --cask slack
 brew install --cask spark
-brew install --cask visual-studio-code
+brew install --cask cursor
 
 # pkg
 brew install gh

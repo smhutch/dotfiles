@@ -3,6 +3,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 plugins=(
   git
+  gitfast
   z
   zsh-autosuggestions
 )
